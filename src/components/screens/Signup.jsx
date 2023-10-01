@@ -42,6 +42,13 @@ const navigate = useNavigate();
   isValid = false;
 }
 
+ // Validate password
+//  if (!inputs.password) {
+//   newErrors.password = 'Password is required';
+// } else if (inputs.password.length < 4) {
+//   newErrors.password = 'Password must be at least 4 characters long';
+// }
+
 
 setErrors(newErrors);
 return isValid;
@@ -64,7 +71,7 @@ return isValid;
       .then((response) => {
         console.log('response')
         console.log(response.data.message)
-        if (response.data.message === "Registered Succesfully") {
+        if (response.data.message === "Registered Successfully") {
           alert(response.data.message);
           navigate('/login');
         }

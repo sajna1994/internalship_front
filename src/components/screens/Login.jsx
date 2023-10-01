@@ -49,7 +49,7 @@ const Login = () => {
         sessionStorage.setItem("userrole", role);
         alert(response.data.message);
         if (role === 'admin') {
-          navigate('/admin');
+          navigate('/admindash');
         } else {
           navigate('/movie');
         }
@@ -65,7 +65,9 @@ const Login = () => {
 
     <div className="container-fluid  d-flex justify-content-center align-items-center">
     <div className="card p-5" style={{maxWidth: "700px", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",background:"rgba(255, 251, 251, 0.15)" }}>
+     
       <div className="card-body text-white" >
+        
         <div className="mb-3">
           <label htmlFor="email" className="form-label">Email</label>
           <input type="text" className="form-control" id="email" name="email" onChange={inputHandler} />
@@ -82,7 +84,9 @@ const Login = () => {
           <button className="btn btn-success btn-block " onClick={addHandler} style={{ borderRadius: "5px", fontWeight: "bold",marginLeft:"70px" }}>Submit</button>
         </div>
         <a className="btn btn-link text-danger" href="/sign" style={{  textDecoration: "none",marginLeft:"45px",textShadow:"2px 2px 4px #000000",letterSpacing:"3px" }}>I'm a new user!</a>
+      
       </div>
+      
     </div>
   </div>
   </div>

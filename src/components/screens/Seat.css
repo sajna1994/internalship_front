@@ -1,0 +1,41 @@
+/* Styling for theater seat arrangement */
+.theater {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.seat {
+  width: 40px; /* Adjust the width as needed for your design */
+  height: 40px; /* Make the height the same as the width for square seats */
+  background-color: #ddd;
+  border: 1px solid #999;
+  margin: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.seat.selected {
+  background-color: #ff9900; /* Selected seat color */
+  color: white;
+  border: 1px solid #ff9900;
+}
+
+/* Seat.css */
+.already-booked {
+  background-color: red; /* Set the background color to red */
+  color: white; /* Set the text color to white */
+  cursor: not-allowed; /* Change cursor to 'not-allowed' to indicate it's disabled */
+  pointer-events: none; /* Disable pointer events to prevent clicking on the seat */
+}
